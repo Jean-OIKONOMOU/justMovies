@@ -25,25 +25,25 @@ const Home = () => (
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
+            <a className="nav-link cool-link" href="#">About</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Services</a>
+            <a className="nav-link cool-link" href="#">Services</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
+            <a className="nav-link cool-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div className="container pt-5">
+  <div className="container pt-5 bg-dark">
     <div className="row">
 
       <div className="col-lg-3">
 
-        <h1 className="my-4">Shop Name</h1>
+        <h1 className="my-4" style={{color:'black'}}>Shop Name</h1>
         <div className="list-group">
           <a href="#" className="list-group-item">Category 1</a>
           <a href="#" className="list-group-item">Category 2</a>
@@ -195,10 +195,40 @@ const Home = () => (
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+          background-color: #343a40!important;
+          
       }
 
       * {
         box-sizing: border-box;
+      }
+
+      h1 {
+        color: black;
+      }
+
+      a {
+        margin-bottom: 10px;
+      }
+      
+      .cool-link {
+          display: inline-block;
+          color: #000;
+          text-decoration: none;
+      }
+      
+      .cool-link::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #000;
+          transition: width .3s;
+      }
+      
+      .cool-link:hover::after {
+          width: 100%;
+          //transition: width .3s;
       }
     `}</style>
 </div>
